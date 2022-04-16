@@ -17,11 +17,9 @@ public static class NewtonsoftJsonPropertyNameFormatter
         }
 
         JsonPropertyAttribute attribute = property.GetCustomAttribute<JsonPropertyAttribute>();
-        if (!string.IsNullOrEmpty(attribute?.PropertyName))
-        {
-            return attribute.PropertyName;
-        }
 
-        return property.Name;
+        return string.IsNullOrEmpty(attribute?.PropertyName)
+            ? property.Name
+            : attribute.PropertyName;
     };
 }
