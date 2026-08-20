@@ -6,8 +6,7 @@ A Newtonsoft.Json property name formatter for [GraphQL.Query.Builder](https://gi
 
 This formatter returns the [JsonPropertyAttribute](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonPropertyAttribute.htm) value.
 
-[![Build Status](https://dev.azure.com/charlesdevandiere/charlesdevandiere/_apis/build/status/charlesdevandiere.graphql-query-builder-formatter-newtonsoftjson?branchName=master)](https://dev.azure.com/charlesdevandiere/charlesdevandiere/_build/latest?definitionId=6&branchName=master)
-![Coverage](https://img.shields.io/azure-devops/coverage/charlesdevandiere/charlesdevandiere/6/master)
+[![Build Status](https://github.com/charlesdevandiere/graphql-query-builder-formatter-newtonsoftjson/actions/workflows/ci.yml/badge.svg)](https://github.com/charlesdevandiere/graphql-query-builder-formatter-newtonsoftjson/actions/workflows/ci.yml)
 [![Nuget](https://img.shields.io/nuget/v/GraphQL.Query.Builder.Formatter.NewtonsoftJson.svg?color=blue&logo=nuget)](https://www.nuget.org/packages/GraphQL.Query.Builder.Formatter.NewtonsoftJson)
 [![Downloads](https://img.shields.io/nuget/dt/GraphQL.Query.Builder.Formatter.NewtonsoftJson.svg?logo=nuget)](https://www.nuget.org/packages/GraphQL.Query.Builder.Formatter.NewtonsoftJson)
 
@@ -32,7 +31,7 @@ public class Human
 // Initialize the options
 QueryOptions options = new()
 {
-    Formatter = SystemTextJsonPropertyNameFormatter.Format
+    Formatter = NewtonsoftJsonPropertyNameFormatter.Format
 };
 
 // Create the query with the options

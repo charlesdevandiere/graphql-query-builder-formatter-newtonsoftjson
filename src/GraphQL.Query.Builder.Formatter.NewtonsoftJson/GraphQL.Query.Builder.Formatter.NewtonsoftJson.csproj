@@ -13,13 +13,13 @@
     <Description>A property name formatter for GraphQL.Query.Builder based on Newtonsoft.Json.</Description>
     <Summary>A property name formatter for GraphQL.Query.Builder based on Newtonsoft.Json.</Summary>
     <PackageIcon>logo.png</PackageIcon>
-    <PackageIconUrl>https://raw.githubusercontent.com/charlesdevandiere/graphql-query-builder-dotnet-newtonsoftjson/master/logo.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/charlesdevandiere/graphql-query-builder-formatter-newtonsoftjson/master/logo.png</PackageIconUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://charlesdevandiere.github.io/graphql-query-builder-dotnet-newtonsoftjson</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/charlesdevandiere/graphql-query-builder-formatter-newtonsoftjson</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>graphql</PackageTags>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/charlesdevandiere/graphql-query-builder-dotnet-newtonsoftjson</RepositoryUrl>
+    <RepositoryUrl>https://github.com/charlesdevandiere/graphql-query-builder-formatter-newtonsoftjson</RepositoryUrl>
     
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -27,7 +27,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
@@ -38,8 +38,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="all" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.400" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 
 </Project>
